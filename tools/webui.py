@@ -352,7 +352,7 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    args.precision = torch.half if args.half else torch.bfloat16
+    args.precision = torch.half if args.half else torch.float16
 
     logger.info("Loading Llama model...")
     llama_queue = launch_thread_safe_queue(
@@ -393,4 +393,4 @@ if __name__ == "__main__":
     logger.info("Warming up done, launching the web UI...")
 
     app = build_app()
-    app.launch(show_api=True)
+    app.launch(show_api=True, share=True, debug=True)
