@@ -32,7 +32,7 @@ dependencies = [
     "natsort>=8.4.0",
     "pyrootutils>=1.0.4",
     "vector_quantize_pytorch>=1.14.7",
-    "samplerate>=0.2.1",
+    "samplerate@git+https://github.com/tuxu/python-samplerate",
     "resampy>=0.4.3",
     "einx[torch]==0.2.2"
 ]
